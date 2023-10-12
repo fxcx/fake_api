@@ -1,22 +1,22 @@
 import express from "express";
-import FAKE_DB from "./db";
+import {FAKE_DB} from "./db";
 
 const app = express();
 
-app.get("/", (req, res) => {
+app.get("/", (_req, res) => {
   res.send("Express on Vercel");
 });
 
-// Ruta para obtener todos los productos
-app.get("/api/products", (req, res) => {
-  res.json(FAKE_DB);
+// Ruta para obtener productos de la categoría "acompañamiento"
+app.get("/acompaniamiento", (_req, res) => {
+  const productos = FAKE_DB.acompañamiento; // Obtiene la categoría de acompañamiento
+  res.json(productos);
 });
 
-// Ruta para obtener productos por categoría
-app.get("/api/products/category/:category", (req, res) => {
-  const category = req.params.category;
-  const productsInCategory = FAKE_DB.filter((product) => product.category === category);
-  res.json(productsInCategory);
+// Ruta para obtener productos de la categoría "postres"
+app.get("/postres", (_req, res) => {
+  const productos = FAKE_DB.postres; // Obtiene la categoría de postres
+  res.json(productos);
 });
 
 
