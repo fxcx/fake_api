@@ -7,9 +7,6 @@ const PRODUCT = require("./data.js");
 
 app.use(cors())
 // Create GET request
-app.get('/', (_req, res) => {
-  send('express con vercel')
-})
 
 app.get("/productos", (_req, res) => {
   const allProducts = [...PRODUCT.acompañamiento, ...PRODUCT.postres];
