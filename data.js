@@ -57,7 +57,7 @@ const PRODUCT = {
             "image": "https://res.cloudinary.com/dbry8g6vk/image/upload/v1695230636/verduras_a_las_brasas_df83bae3c0.png"
         }
     ],
-    postres: [
+    "postres": [
         {
             "id": 1,
             "name": "Flan",
