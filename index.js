@@ -1,5 +1,5 @@
 import express from "express";
-import {FAKE_DB} from "./db";
+import {FAKE_DB} from "./db.js";
 
 const app = express();
 
