@@ -1,11 +1,13 @@
 // Add Express
 const express = require("express");
+const cors = require("cors")
 // Initialize Express
 const app = express();
 const PRODUCT = require("./data.js");
 
+app.use(cors())
 // Create GET request
-app.get("/api", (_req, res) => {
+app.get("/", (_req, res) => {
   res.send("Express Vercel");
 });
 
