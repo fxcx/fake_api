@@ -19,4 +19,3 @@ app.get("/postres", (_req, res) => {
   res.json(productos);
 });
 
-export default app
