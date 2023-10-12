@@ -7,9 +7,13 @@ const PRODUCT = require("./data.js");
 
 app.use(cors())
 // Create GET request
+app.get('/', (_req, res) => {
+  send('express con vercel')
+})
+
 app.get("/productos", (_req, res) => {
   const allProducts = [...PRODUCT.acompañamiento, ...PRODUCT.postres];
-  res.json(allProducts);
+ return res.json(allProducts);
 });
 
 app.get("/acompaniamiento", (_req, res) => {
@@ -20,6 +24,26 @@ app.get("/postres", (_req, res) => {
   const productos = PRODUCT.postres
  return res.json(productos);
 });
+app.get("/vinos", (_req, res) => {
+  const productos = PRODUCT.vinos
+ return res.json(productos);
+});
+app.get("/cervezas", (_req, res) => {
+  const productos = PRODUCT.cervezas
+ return res.json(productos);
+});
+app.get('/bebidas',(_req, res) => {
+  const productos = PRODUCT.bebidas
+  return res
+})
+app.get('/menuInfantil',(_req, res) => {
+  const productos = PRODUCT.menuInfantil
+  return res.json(productos);
+})
+app.get('/menuPrincipal',(_req, res) => {
+  const productos = PRODUCT.cervezas
+  return res.json(productos);
+})
 // Initialize server
 app.listen(5000, () => {
   console.log("Running on port 5000.");
