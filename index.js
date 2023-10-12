@@ -1,21 +1,18 @@
-import express from "express";
-import FAKE_DB from "./db.js";
+// Add Express
+const express = require("express");
 
+// Initialize Express
 const app = express();
 
-app.get("/", (_req, res) => {
+// Create GET request
+app.get("/", (req, res) => {
   res.send("Express on Vercel");
 });
 
-// Ruta para obtener productos de la categoría "acompañamiento"
-app.get("/acompaniamiento", (_req, res) => {
-  const productos = FAKE_DB.acompañamiento; // Obtiene la categoría de acompañamiento
-  res.json(productos);
+// Initialize server
+app.listen(5000, () => {
+  console.log("Running on port 5000.");
 });
 
-// Ruta para obtener productos de la categoría "postres"
-app.get("/postres", (_req, res) => {
-  const productos = FAKE_DB.postres; // Obtiene la categoría de postres
-  res.json(productos);
-});
-
+// Export the Express API
+module.exports = app;
