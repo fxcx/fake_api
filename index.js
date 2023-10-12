@@ -8,11 +8,7 @@ const PRODUCT = require("./data.js");
 app.use(cors())
 // Create GET request
 app.get("/productos", (_req, res) => {
-  const allProducts = {
-    acompañamiento: PRODUCT.acompañamiento,
-    postres: PRODUCT.postres,
-  };
-  res.json(allProducts);
+  res.json(PRODUCT);
 });
 
 app.get("/acompaniamiento", (_req, res) => {
