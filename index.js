@@ -1,5 +1,5 @@
 import express from "express";
-import {FAKE_DB} from "./db.js";
+import FAKE_DB from "./db.js";
 
 const app = express();
 
@@ -18,6 +18,3 @@ app.get("/postres", (_req, res) => {
   const productos = FAKE_DB.postres; // Obtiene la categoría de postres
   res.json(productos);
 });
-
-
-module.exports = app;
