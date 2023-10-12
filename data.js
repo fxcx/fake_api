@@ -1,4 +1,4 @@
-{
+const PRODUCT = {
    "acompañamiento": [
         {
             "id": 1,
@@ -93,6 +93,7 @@
             "description": "Browni adornado con bocha de Helado a eleccion",
             "image": "https://res.cloudinary.com/dbry8g6vk/image/upload/v1695230882/americadigital_brownie_helado_3da7c60d94.png"
         }
-    ],
+    ]
     
 }
+module.export = PRODUCT
