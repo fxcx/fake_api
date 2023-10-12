@@ -1,4 +1,4 @@
-const FAKE_DB = {
+{
    "acompañamiento": [
         {
             "id": 1,
@@ -96,4 +96,3 @@ const FAKE_DB = {
     ],
     
 }
-export default FAKE_DB
