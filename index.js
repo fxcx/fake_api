@@ -31,7 +31,7 @@ app.get("/cervezas", (_req, res) => {
 });
 app.get('/bebidas',(_req, res) => {
   const productos = PRODUCT.bebidas
-  return res
+  return res.json(productos)
 })
 app.get('/menuInfantil',(_req, res) => {
   const productos = PRODUCT.menuInfantil
