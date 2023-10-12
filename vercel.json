@@ -11,7 +11,7 @@
     "routes": [
         {
        
-          "src": "/.db",
+          "src": "/(.*)",
        
           "dest": "index.js"
         }
