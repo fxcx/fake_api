@@ -18,3 +18,5 @@ app.get("/postres", (_req, res) => {
   const productos = FAKE_DB.postres; // Obtiene la categoría de postres
   res.json(productos);
 });
+
+export default app
