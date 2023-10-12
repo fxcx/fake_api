@@ -5,10 +5,6 @@ const PRODUCT = require("./data.js");
 const app = express();
 
 // Create GET request
-app.get("/", (_req, res) => {
-  res.send("Express on Vercel");
-});
-
 app.get("/productos", (_req, res) => {
   const productos = PRODUCT.acompañamiento;
   res.json(productos);
