@@ -258,7 +258,7 @@ const PRODUCT = {
             "image": "https://res.cloudinary.com/dbry8g6vk/image/upload/v1696764277/pizza_a_la_parrilla_xn9nmm.png"
         }
     ],
-    menuPrincimal:[
+    menuPrincipal:[
         {
             "id": 1,
             "name": "Salchicha Parrillera",

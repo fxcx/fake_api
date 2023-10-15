@@ -1,7 +1,7 @@
-// Add Express
+
 const express = require("express");
 const cors = require("cors")
-// Initialize Express
+
 const app = express();
 const PRODUCT = require("./data.js");
 
@@ -9,7 +9,16 @@ app.use(cors())
 // Create GET request
 
 app.get("/productos", (_req, res) => {
-  const allProducts = [...PRODUCT.acompañamiento, ...PRODUCT.postres];
+  const allProducts = [
+    ...PRODUCT.acompañamiento,
+    ...PRODUCT.postres,
+    ...PRODUCT.cafeteria,
+    ...PRODUCT.vinos,
+    ...PRODUCT.cervezas,
+    ...PRODUCT.bebidas,
+    ...PRODUCT.menuInfantil,
+    ...PRODUCT.menuPrincipal
+  ];
  return res.json(allProducts);
 });
 
@@ -38,10 +47,10 @@ app.get('/menuInfantil',(_req, res) => {
   return res.json(productos);
 })
 app.get('/menuPrincipal',(_req, res) => {
-  const productos = PRODUCT.cervezas
+  const productos = PRODUCT.menuPrincipal
   return res.json(productos);
 })
-// Initialize server
+
 app.listen(5000, () => {
   console.log("Running on port 5000.");
 });
