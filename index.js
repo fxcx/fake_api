@@ -50,6 +50,10 @@ app.get('/menuPrincipal',(_req, res) => {
   const productos = PRODUCT.menuPrincipal
   return res.json(productos);
 })
+app.get('/cafeteria',(_req, res) => {
+  const productos = PRODUCT.cafeteria
+  return res.json(productos);
+})
 
 app.listen(5000, () => {
   console.log("Running on port 5000.");
